@@ -1,0 +1,110 @@
+.admin-panel {
+  font-family: var(--fontFamily-comforta);
+
+  &__container {
+    display: flex;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--background-default);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &__data-container {
+    background-color: var(--background-default);
+    border: 1px solid #dfe0eb;
+    margin-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: var(--border-radius);
+  }
+
+  &__data-title-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+  }
+
+  &__data-title {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  &__data-kits {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__data-kit {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    border: 0.5px solid #ebebeb;
+    border-radius: var(--border-radius);
+    background-color: var(--background-default);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:active {
+      background-color: var(--background-data);
+    }
+  }
+
+  &__data-items-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #9fa2b4;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(6, 16.6%);
+    border-bottom: 1px solid #dfe0eb;
+  }
+
+  &__item-name {
+    font-weight: 700;
+    padding: 26px 0px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+  }
+
+  &__data-kits-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    padding: 30px;
+  }
+
+  &__data-kit {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9fa2b4;
+  }
+
+  &__data-kit-select {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9fa2b4;
+  }
+}
