@@ -1,0 +1,116 @@
+// Color system
+// Options
+$enable-rounded: false;
+$enable-grid-classes: false;
+$enable-caret: false;
+$enable-validation-icons: false;
+$enable-important-utilities: false;
+
+// Prefix for :root CSS variables
+$variable-prefix: null;
+
+// Gradient
+
+// Spacing
+
+// Position
+
+// Body
+
+// Utilities maps
+
+// Links
+
+// Paragraphs
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1536px,
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+// Grid containers
+$container-max-widths: (
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1536px,
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Grid columns
+
+// Container padding
+
+// Components
+
+// Typography
+$font-family-base: $font-family-sans-serif;
+$font-family-code: $font-family-monospace;
+
+// Tables
+
+// Buttons + Forms
+
+// Buttons
+
+// Forms
+
+// Form validation
+
+// Z-index master list
+
+// Navs
+
+// Navbar
+
+// Dropdowns
+
+// Pagination
+
+// Placeholders
+
+// Cards
+
+// Accordion
+
+// Tooltips
+
+// Popovers
+
+// Toasts
+
+// Badges
+
+// Modals
+
+// Alerts
+
+// Progress bars
+
+// List group
+
+// Image thumbnails
+
+// Figures
+
+// Breadcrumbs
+
+// Carousel
+
+// Spinners
+
+// Close
+
+// Offcanvas
+
+// Code

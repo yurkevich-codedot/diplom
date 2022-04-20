@@ -1,0 +1,30 @@
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    /* Edge */
+    color: $color !important;
+    opacity: 1 !important;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color !important;
+    opacity: 1 !important;
+  }
+
+  &::placeholder {
+    color: $color !important;
+    opacity: 1 !important;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent !important;
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: transparent !important;
+  }
+
+  &:focus::placeholder {
+    color: transparent !important;
+  }
+}

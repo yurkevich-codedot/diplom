@@ -1,0 +1,30 @@
+.container-fluid,
+.container {
+  @include make-container();
+}
+
+.container {
+  @include media-breakpoint-down(sm) {
+    max-width: map-get($container-max-widths, sm);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    max-width: map-get($container-max-widths, sm);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    max-width: map-get($container-max-widths, md);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    max-width: map-get($container-max-widths, lg);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    max-width: map-get($container-max-widths, xl);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-width: map-get($container-max-widths, xxl);
+  }
+}
