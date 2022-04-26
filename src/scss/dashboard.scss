@@ -1,15 +1,77 @@
+// #accountMenu {
+//   display: none;
+
+//   @include media-breakpoint-down(md) {
+//     &:not(:checked) ~ .account---menu {
+//       transform: translateX(-100%);
+
+//       &__backdrop {
+//         pointer-events: none;
+//         opacity: 0;
+//       }
+//     }
+
+//     &:checked ~ .account---menu {
+//       transform: translateX(0);
+
+//       &__backdrop {
+//         opacity: var(--filters-opacity);
+//       }
+//     }
+//   }
+// }
+
+#dashboardMenu {
+  display: none;
+  @include media-breakpoint-down(xl) {
+    &:not(:checked) ~ .dashboard {
+      left: -320px;
+    }
+
+    &:not(:checked) ~ .backdrop {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  &:checked ~ .dashboard {
+    left: 0px;
+  }
+
+  &:checked ~ .backdrop {
+    opacity: 0.5;
+  }
+}
+
+.backdrop {
+  @include media-breakpoint-down(xl) {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #747474;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
 .dashboard {
-  height: 100vh;
   background-color: rgb(54, 55, 64);
+  width: max-content;
   justify-content: flex-start;
   font-family: var(--fontFamily-comforta);
 
   @include media-breakpoint-up(xl) {
+    height: 100vh;
     width: 21%;
   }
 
   @include media-breakpoint-down(xl) {
-    display: none;
+    height: 100%;
+    position: fixed;
+    overflow: scroll;
+    z-index: 2;
+    box-shadow: 0 0 10px 0 black;
   }
 
   &__header {

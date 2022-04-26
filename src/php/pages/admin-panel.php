@@ -1,3 +1,8 @@
+<?php
+require_once("scripts/connect.php");
+?>
+
+
 <section class="admin-panel">
   <div class="admin-panel__container">
     <input type="checkbox" id="dashboardMenu" />

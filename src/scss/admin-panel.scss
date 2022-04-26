@@ -7,6 +7,10 @@
   border-radius: var(--border-radius);
   margin-top: 10px;
 
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+
   &__text {
     color: var(--item-text-color);
     font-size: 12px;
@@ -20,8 +24,6 @@
     display: flex;
   }
   &__content {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     padding: 30px;
     background-color: var(--background-default);
