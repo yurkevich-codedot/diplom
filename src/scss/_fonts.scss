@@ -9,3 +9,48 @@
   font-stretch: normal;
   unicode-range: U+0020-2074;
 }
+
+@font-face {
+  font-family: "Impact";
+  src: url("Impact.eot");
+  src: url("Impact.eot?#iefix") format("embedded-opentype"), url("Impact.woff2") format("woff2"),
+    url("Impact.woff") format("woff"), url("Impact.svg#Impact") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0021-00FE;
+}
+
+@font-face {
+  font-family: "Impact";
+  src: url("Impact.eot");
+  src: url("Impact.eot?#iefix") format("embedded-opentype"), url("Impact.woff2") format("woff2"),
+    url("Impact.woff") format("woff"), url("Impact.svg#Impact") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: condensed;
+  unicode-range: U+0020-02DC;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto Bold.eot");
+  src: url("Roboto Bold.eot?#iefix") format("embedded-opentype"),
+    url("Roboto Bold.woff2") format("woff2"), url("Roboto Bold.woff") format("woff"),
+    url("Roboto Bold.svg#Roboto Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto.eot");
+  src: url("Roboto.eot?#iefix") format("embedded-opentype"), url("Roboto.woff2") format("woff2"),
+    url("Roboto.woff") format("woff"), url("Roboto.svg#Roboto") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
