@@ -2,16 +2,67 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
   background-color: black;
+  color: white;
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
     padding-top: 90px;
     padding-left: 240px;
     padding-right: 240px;
     padding-bottom: 40px;
+    gap: 100px;
   }
 
+  &__wrapper-inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper-inner:last-of-type() {
+    padding-top: 30px;
+    border-top: 1px solid white;
+  }
   &__title {
     color: white;
     font-size: 28px;
+  }
+
+  &__list-title {
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover,
+    &:active {
+      color: #883cda;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    gap: 20px;
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 10px;
+      border-top: 1px solid white;
+    }
+  }
+
+  &__item {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      color: #883cda;
+    }
   }
 }

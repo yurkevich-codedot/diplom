@@ -139,13 +139,21 @@
   }
 
   &__search {
-    border: 1px solid black;
+    border: 2px solid #d8d2df;
+    box-shadow: 0 0 0;
     border-radius: 25px;
     padding: 10px 15px;
+    transition: border 0.25s ease-in-out;
 
     @include media-breakpoint-between(md, lg) {
       padding: 5px 10px;
       font-size: 14px;
+    }
+
+    &:focus-visible,
+    &:active {
+      border: 2px solid #883cda;
+      outline: none;
     }
   }
 
