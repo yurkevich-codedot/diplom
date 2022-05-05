@@ -38,8 +38,13 @@
     left: 0px;
   }
 
+  &:checked ~ body {
+    overflow: hidden;
+  }
+
   &:checked ~ .backdrop {
     opacity: 0.5;
+    transition: opacity 1s ease-in-out;
   }
 }
 

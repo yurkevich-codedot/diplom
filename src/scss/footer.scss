@@ -8,28 +8,53 @@
     display: flex;
     flex-direction: column;
     padding-top: 90px;
-    padding-left: 240px;
-    padding-right: 240px;
     padding-bottom: 40px;
-    gap: 100px;
+    gap: 50px;
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 50px;
+      padding-bottom: 90px;
+    }
+
+    @include media-breakpoint-down(xl) {
+    }
   }
 
   &__wrapper-inner {
     display: flex;
-    justify-content: space-between;
+
+    gap: 30px;
 
     @include media-breakpoint-down(lg) {
       flex-direction: column;
     }
+
+    @include media-breakpoint-up(lg) {
+      justify-content: space-between;
+    }
   }
 
   &__wrapper-inner:last-of-type() {
-    padding-top: 30px;
     border-top: 1px solid white;
   }
   &__title {
     color: white;
-    font-size: 28px;
+    font-weight: 600;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+    @include media-breakpoint-down(md) {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 28px;
+    }
   }
 
   &__list-title {
@@ -41,6 +66,21 @@
     &:active {
       color: #883cda;
     }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 24px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 18px;
+    }
+  }
+
+  &__list-wrapper {
+    @include media-breakpoint-down(lg) {
+      padding-top: 25px;
+      border-top: 1px solid white;
+    }
   }
 
   &__items {
@@ -48,11 +88,6 @@
     flex-direction: column;
     padding-top: 40px;
     gap: 20px;
-
-    @include media-breakpoint-down(lg) {
-      padding-top: 10px;
-      border-top: 1px solid white;
-    }
   }
 
   &__item {
@@ -63,6 +98,14 @@
     &:hover,
     &:active {
       color: #883cda;
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 18px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 16px;
     }
   }
 }

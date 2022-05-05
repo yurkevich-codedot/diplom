@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__title">Достопримечательности Витебской области</div>
+        <input type="checkbox" id="menu" />
+        <label class="menu" for="menu"
+          ><div class="header__menu-btn" onclick="s();"><div class="header__menu-icon"></div></div
+        ></label>
+        <label class="backdrop" for="menu"></label>
+        <div class="header__nav-wrapper">
+          <div class="header__user">daniilsergeevich200111@gmail.com</div>
+          <div class="header__nav-wrapper-list">
+            <div class="header__nav-list">
+              <a class="header__item">Главная</a> <a class="header__item">Новости</a>
+              <a class="header__item">Достопримечательности</a> <a class="header__item">Категории</a>
+              <a class="header__item">Населенный пункт</a>
+              <div class="header__search-wrapper">
+                <input class="header__search" id="search" placeholder="Поиск..." />
+                <button class="header__search-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2" />
+                    <path d="M20 20L17 17" stroke="black" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <a class="header__btn-sign">Войти</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="/js/main.min.js"></script>
+  </body>
+</html>
