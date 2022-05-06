@@ -1,26 +1,3 @@
-// #accountMenu {
-//   display: none;
-
-//   @include media-breakpoint-down(md) {
-//     &:not(:checked) ~ .account---menu {
-//       transform: translateX(-100%);
-
-//       &__backdrop {
-//         pointer-events: none;
-//         opacity: 0;
-//       }
-//     }
-
-//     &:checked ~ .account---menu {
-//       transform: translateX(0);
-
-//       &__backdrop {
-//         opacity: var(--filters-opacity);
-//       }
-//     }
-//   }
-// }
-
 #dashboardMenu {
   display: none;
   @include media-breakpoint-down(xl) {
