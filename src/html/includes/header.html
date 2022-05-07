@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="myHeader">
   <div class="header__wrapper">
     <div class="header__title">Достопримечательности Витебской области</div>
     <input type="checkbox" id="menu" />
@@ -17,13 +17,18 @@
       <div class="header__user">daniilsergeevich200111@gmail.com</div>
       <div class="header__nav-wrapper-list">
         <div class="header__nav-list">
-          <a class="header__item">Главная</a>
-          <a class="header__item">Новости</a>
-          <a class="header__item">Достопримечательности</a>
-          <a class="header__item">Категории</a>
-          <a class="header__item">Населенный пункт</a>
+          <a href="#" class="header__item">Главная</a>
+          <a href="#" class="header__item">Новости</a>
+          <a href="#" class="header__item">Достопримечательности</a>
+          <a href="#" class="header__item">Категории</a>
+          <a href="#" class="header__item">Населенный пункт</a>
           <div class="header__search-wrapper">
-            <input class="header__search" id="search" placeholder="Поиск..." />
+            <input
+              class="header__search"
+              id="searchHeader"
+              name="search_bar"
+              placeholder="Поиск..."
+            />
             <button class="header__search-icon">
               <svg
                 width="24"
@@ -38,7 +43,7 @@
             </button>
           </div>
         </div>
-        <a class="header__btn-sign"> Войти </a>
+        <a href="#" class="header__btn-sign"> Войти </a>
       </div>
     </div>
   </div>

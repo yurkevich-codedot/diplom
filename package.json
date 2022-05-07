@@ -12,6 +12,8 @@
   "dependencies": {
     "@popperjs/core": "^2.9.3",
     "bootstrap": "^5.1.0",
+    "mapbox": "^1.0.0-beta10",
+    "mapbox-gl": "^2.8.2",
     "swiper": "^8.1.4"
   },
   "devDependencies": {

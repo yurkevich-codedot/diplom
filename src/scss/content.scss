@@ -3,6 +3,23 @@
   position: relative;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.mapboxgl-ctrl {
+  display: none;
+}
+.mapboxgl-canvas {
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+}
 .prev {
   left: 0;
 }
@@ -17,10 +34,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 50%;
+  top: 52%;
   height: 40px;
   width: 40px;
-  border: 5px solid black;
+  opacity: 0.7;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   transition: 0.2s background-color ease-in-out;
@@ -35,10 +52,10 @@
 .next::before {
   position: absolute;
   content: "";
-  width: 10px;
-  height: 10px;
-  border-top: 5px solid black;
-  border-right: 5px solid black;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
 }
 
 .next::before {
@@ -56,8 +73,8 @@
 
 .prev:hover::before,
 .next:hover::before {
-  border-top: 5px solid rgb(255, 255, 255);
-  border-right: 5px solid rgb(255, 255, 255);
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255);
 }
 
 .content {
@@ -66,6 +83,7 @@
     display: flex;
     flex-direction: column;
     gap: 70px;
+    overflow: hidden;
   }
   &__discription-wrapper {
     display: flex;
@@ -91,15 +109,31 @@
   &__title {
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     font-weight: 900;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+    }
   }
 
   &__subtitle {
-    max-width: 450px;
+    @include media-breakpoint-down(lg) {
+      word-wrap: break-word;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 450px;
+    }
   }
 
   &__map {
+    min-height: 650px;
     border-radius: 25px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-height: 650px;
+
+    @include media-breakpoint-down(lg) {
+      min-height: 402px;
+      max-height: 402px;
+    }
   }
 
   &__items {
@@ -116,35 +150,47 @@
   }
 
   &__item {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+      "Open Sans", "Helvetica Neue", sans-serif;
     position: relative;
     display: flex;
     overflow: hidden;
-    box-shadow: 0 0 2px black;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.425);
     flex: 0 0 auto;
+
+    &:hover > .content__name-wrapper {
+      display: flex;
+      background-color: #00000050;
+      top: 0;
+    }
   }
 
   &__img-wrapper {
     position: relative;
     border-radius: 25px 25px 0px 0px;
     padding-top: 100%;
-    filter: brightness(1);
     transition: filter 0.2s ease-in-out;
+  }
 
-    &:hover {
-      filter: brightness(30%);
-    }
-    &:hover + .content__name {
-      display: block;
-      position: absolute;
-    }
-
-    &:hover + .content__name + .content__item-discription {
-      display: block;
-      position: absolute;
-    }
+  &__name-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s linear;
+    top: 100%;
+    font-weight: 600;
   }
 
   &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -153,17 +199,26 @@
   }
 
   &__name {
-    background-color: white;
-    justify-content: center;
-    padding: 10px 0px;
-    align-items: center;
-    display: none;
+    color: rgb(255, 255, 255);
   }
 
   &__item-discription {
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    display: none;
+    color: rgb(255, 255, 255);
+  }
+
+  &__btn {
+    cursor: pointer;
+    border: 3px solid #883cda;
+    background-color: #883cda;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+    border-radius: 5px;
+
+    &:hover {
+      color: white;
+      box-shadow: 0 0 5px #9f8fb0;
+    }
   }
 }
