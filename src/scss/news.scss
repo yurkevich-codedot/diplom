@@ -1,0 +1,37 @@
+.lock-scroll {
+  overflow: hidden;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.news {
+  &__img-wrapper {
+    position: relative;
+    border-radius: 35px;
+    overflow: hidden;
+    padding-top: 100%;
+    transition: filter 0.2s ease-in-out;
+  }
+
+  &__name-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: center;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 25px;
+    row-gap: 55px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    gap: 10px;
+    // flex: 1 1 auto;
+  }
+}

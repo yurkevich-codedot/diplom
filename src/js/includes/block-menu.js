@@ -42,66 +42,70 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-const map = new mapboxgl.Map({
-  container: "map",
-  style: "mapbox://styles/danveryurk/cl2vsxthg000114owcquvgewl",
-  center: [30.202, 55.185],
-  zoom: 12,
-});
-
-map.on("load", () => {
-  // Add an image to use as a custom marker
-  map.loadImage("https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png", (error, image) => {
-    if (error) throw error;
-    map.addImage("custom-marker", image);
-    // Add a GeoJSON source with 2 points
-    map.addSource("points", {
-      type: "geojson",
-      data: {
-        type: "FeatureCollection",
-        features: [
-          {
-            // feature for Mapbox SF
-            type: "Feature",
-            geometry: {
-              type: "Point",
-              coordinates: [30.198897, 55.193295],
-            },
-            properties: {
-              title: "Кировский мост",
-            },
-          },
-          {
-            // feature for Mapbox SF
-            type: "Feature",
-            geometry: {
-              type: "Point",
-              coordinates: [30.2006252, 55.1845255],
-            },
-            properties: {
-              title: "Три штыка",
-            },
-          },
-        ],
-      },
-    });
-
-    // Add a symbol layer
-    map.addLayer({
-      id: "points",
-      type: "symbol",
-      source: "points",
-      layout: {
-        "icon-image": "custom-marker",
-        // get the title name from the source's "title" property
-        "text-field": ["get", "title"],
-        "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-        "text-offset": [0, 1.0],
-        "text-anchor": "top",
-      },
-    });
+if (document.querySelector("#map")) {
+  const map = new mapboxgl.Map({
+    container: "map",
+    style: "mapbox://styles/danveryurk/cl2vsxthg000114owcquvgewl",
+    center: [30.202, 55.185],
+    zoom: 12,
   });
-});
+  map.on("load", () => {
+    // Add an image to use as a custom marker
+    map.loadImage(
+      "https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png",
+      (error, image) => {
+        if (error) throw error;
+        map.addImage("custom-marker", image);
+        // Add a GeoJSON source with 2 points
+        map.addSource("points", {
+          type: "geojson",
+          data: {
+            type: "FeatureCollection",
+            features: [
+              {
+                // feature for Mapbox SF
+                type: "Feature",
+                geometry: {
+                  type: "Point",
+                  coordinates: [30.198897, 55.193295],
+                },
+                properties: {
+                  title: "Кировский мост",
+                },
+              },
+              {
+                // feature for Mapbox SF
+                type: "Feature",
+                geometry: {
+                  type: "Point",
+                  coordinates: [30.2006252, 55.1845255],
+                },
+                properties: {
+                  title: "Три штыка",
+                },
+              },
+            ],
+          },
+        });
+
+        // Add a symbol layer
+        map.addLayer({
+          id: "points",
+          type: "symbol",
+          source: "points",
+          layout: {
+            "icon-image": "custom-marker",
+            // get the title name from the source's "title" property
+            "text-field": ["get", "title"],
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            "text-offset": [0, 1.0],
+            "text-anchor": "top",
+          },
+        });
+      }
+    );
+  });
+}
 
 document.querySelector(".header__menu-btn").addEventListener("click", (e) => {
   if (!e.target.classList.contains("lock-scroll")) {
