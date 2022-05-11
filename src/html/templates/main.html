@@ -1,6 +1,7 @@
-<% var data = { title: "Content" } %>
+<% var data = { title: "Index" } %>
 <%= _.template(require('./../includes/_html-top.html').default)(data) %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
+<%= _.template(require('./../includes/index-swiper.html').default)(data) %>
 <%= _.template(require('./../includes/main.html').default)(data) %>
 <%= _.template(require('./../includes/footer.html').default)(data) %>
 <%= _.template(require('./../includes/_html-bottom.html').default)(data) %>

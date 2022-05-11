@@ -1,6 +1,7 @@
-const { Navigation } = require("swiper");
+const { Navigation, Autoplay } = require("swiper");
 
 import Swiper from "swiper";
+
 import mapboxgl from "mapbox-gl";
 mapboxgl.accessToken =
   "pk.eyJ1IjoiZGFudmVyeXVyayIsImEiOiJjbDJ1NXY3YWgwYjV3M2NvNHRteW9tZXpkIn0.zXeb65io4SiZQl3BbejBMQ";
@@ -8,8 +9,8 @@ mapboxgl.accessToken =
 const swiper = new Swiper(".swiper", {
   centeredSlides: false,
   modules: [Navigation],
-  slidesPerView: 2,
-  spaceBetween: 10,
+  // slidesPerView: 1.5,
+  // spaceBetween: 10,
 
   pagination: {
     el: ".swiper-pagination",
@@ -25,6 +26,11 @@ const swiper = new Swiper(".swiper", {
 
   breakpoints: {
     0: {
+      slidesPerView: 1.5,
+      slidesPerGroup: 2,
+      spaceBetween: 10,
+    },
+    480: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 10,
@@ -42,12 +48,36 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+const iswiper = new Swiper(".mySwiper", {
+  modules: [Navigation, Autoplay],
+  slidesPerView: 1,
+  speed: 3000,
+  loop: true,
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  autoplay: {
+    delay: 3000,
+    stopOnLastSlide: false,
+    disableOnInteraction: false,
+  },
+});
+
 if (document.querySelector("#map")) {
   const map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/danveryurk/cl2vsxthg000114owcquvgewl",
     center: [30.202, 55.185],
-    zoom: 12,
+    zoom: 13,
+    pitch: 60,
   });
   map.on("load", () => {
     // Add an image to use as a custom marker
@@ -107,36 +137,40 @@ if (document.querySelector("#map")) {
   });
 }
 
-document.querySelector(".header__menu-btn").addEventListener("click", (e) => {
-  if (!e.target.classList.contains("lock-scroll")) {
-    document.querySelector("body").classList.add("lock-scroll");
-  }
-});
+if (document.querySelector(".header__menu-btn")) {
+  document.querySelector(".header__menu-btn").addEventListener("click", (e) => {
+    if (!e.target.classList.contains("lock-scroll")) {
+      document.querySelector("body").classList.add("lock-scroll");
+    }
+  });
 
-document.querySelector(".backdrop").addEventListener("click", (e) => {
-  if (!e.target.classList.contains("lock-scroll")) {
-    document.querySelector("body").classList.remove("lock-scroll");
-  }
-});
+  document.querySelector(".backdrop").addEventListener("click", (e) => {
+    if (!e.target.classList.contains("lock-scroll")) {
+      document.querySelector("body").classList.remove("lock-scroll");
+    }
+  });
 
-document.querySelector(".header__cross").addEventListener("click", (e) => {
-  if (!e.target.classList.contains("lock-scroll")) {
-    document.querySelector("body").classList.remove("lock-scroll");
-  }
-});
+  document.querySelector(".header__cross").addEventListener("click", (e) => {
+    if (!e.target.classList.contains("lock-scroll")) {
+      document.querySelector("body").classList.remove("lock-scroll");
+    }
+  });
+}
 
-window.onscroll = function () {
-  myFunction();
-};
+// window.onscroll = function () {
+//   myFunction();
+// };
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-header.classList.add("sticky");
+if (document.querySelector(".header")) {
+  var header = document.getElementById("myHeader");
+  // var sticky = header.offsetTop;
+  header.classList.add("sticky");
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
   }
 }
