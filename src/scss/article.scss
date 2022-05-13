@@ -1,0 +1,85 @@
+.article {
+  padding: 40px 0 40px 0;
+
+  &__article-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+  }
+
+  &__article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+    word-break: break-word;
+  }
+
+  &__img-container {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+  }
+
+  &__about-wrapper {
+    padding: 40px 0;
+    // font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+      "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 18px;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__about-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__like-wrapper {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  &__like-label {
+    padding: 0 15px;
+  }
+
+  &__like {
+    font-size: 50px;
+    padding: 0 5px;
+    width: 0;
+    height: 0;
+    // opacity: 0;
+    // visibility: hidden;
+    top: 0;
+    left: 0;
+    transition: color 0.1s linear;
+
+    &::before {
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "❤";
+      color: black;
+    }
+
+    &:hover,
+    &:checked:hover {
+      color: rgba(212, 44, 22, 0.555);
+    }
+
+    &:checked {
+      color: rgb(212, 44, 22);
+    }
+  }
+}

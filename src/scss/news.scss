@@ -101,14 +101,21 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
+    transition: color 0.1s linear;
 
     &:hover {
-      color: rgb(0, 0, 0);
+      color: rgb(100, 100, 100);
     }
   }
 
   &__discription {
     font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 0;
   }
 
   &__pagination {

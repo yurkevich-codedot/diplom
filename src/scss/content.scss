@@ -81,17 +81,17 @@
 
     @include media-breakpoint-down(lg) {
       gap: 40px;
-      padding: 40px 0;
+      padding: 25px 0;
     }
 
     @include media-breakpoint-between(lg, xl) {
       gap: 50px;
-      padding: 70px 0;
+      padding: 55px 0;
     }
 
     @include media-breakpoint-up(xl) {
       gap: 60px;
-      padding: 80px 0;
+      padding: 65px 0;
     }
   }
   &__discription-wrapper {
@@ -125,7 +125,8 @@
   }
 
   &__title {
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+      "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: 900;
 
     @include media-breakpoint-down(lg) {
@@ -143,17 +144,6 @@
     }
   }
 
-  &__map {
-    min-height: 650px;
-    border-radius: 25px;
-    max-height: 650px;
-
-    @include media-breakpoint-down(lg) {
-      min-height: 402px;
-      max-height: 402px;
-    }
-  }
-
   &__items {
     position: relative;
     overflow: hidden;
@@ -161,7 +151,8 @@
   }
 
   &__items-title {
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+      "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: bold;
     font-size: 26px;
     padding: 20px 0px;
@@ -186,6 +177,7 @@
   }
 
   &__img-wrapper {
+    position: relative;
     padding-top: 100%;
     transition: filter 0.2s ease-in-out;
   }

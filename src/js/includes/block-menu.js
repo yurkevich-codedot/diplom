@@ -74,10 +74,10 @@ const iswiper = new Swiper(".mySwiper", {
 if (document.querySelector("#map")) {
   const map = new mapboxgl.Map({
     container: "map",
-    style: "mapbox://styles/danveryurk/cl2vsxthg000114owcquvgewl",
+    style: "mapbox://styles/danveryurk/cl343ryf0000014qf07xxxlvt",
     center: [30.202, 55.185],
-    zoom: 13,
-    pitch: 60,
+    zoom: 15,
+    pitch: 50,
   });
   map.on("load", () => {
     // Add an image to use as a custom marker
