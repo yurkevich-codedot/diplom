@@ -1,0 +1,61 @@
+.swiper-flex {
+  display: flex;
+  position: relative;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev,
+.next {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 52%;
+  height: 40px;
+  width: 40px;
+  opacity: 0.7;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: 0.2s background-color ease-in-out;
+  transition: 0.1s opacity ease-in-out;
+}
+
+.next.swiper-button-disabled,
+.prev.swiper-button-disabled {
+  opacity: 0;
+}
+.prev::before,
+.next::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.next::before {
+  transform: rotate(45deg);
+}
+
+.prev::before {
+  transform: rotate(-135deg);
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.prev:hover::before,
+.next:hover::before {
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255);
+}

@@ -1,0 +1,10 @@
+.mapboxgl {
+  &-ctrl {
+    display: none;
+  }
+
+  &-canvas {
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+  }
+}

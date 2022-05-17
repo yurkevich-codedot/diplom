@@ -1,13 +1,15 @@
-.sticky + .main {
-  @include media-breakpoint-up(lg) {
-    padding: 210px 0 80px 0;
-  }
+.lock-scroll {
+  overflow: hidden;
+}
 
-  @include media-breakpoint-between(lg, xl) {
-    padding: 255px 0 70px 0;
-  }
+::-webkit-scrollbar {
+  width: 15px;
+  height: 4px;
+  background-color: #d4d4d4;
+}
 
-  @include media-breakpoint-down(lg) {
-    padding: 120px 0 40px 0;
-  }
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #883cda;
+  border: 3px solid #d4d4d4;
 }
