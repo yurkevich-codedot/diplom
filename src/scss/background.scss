@@ -1,10 +1,11 @@
 .background {
+  font-family: var(--fontFamily-text);
   align-items: center;
   display: flex;
   padding-bottom: 48px;
   padding-top: 48px;
   position: relative;
-  color: white;
+  color: var(--white);
 
   &__img {
     height: 100%;

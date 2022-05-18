@@ -1,4 +1,4 @@
-@mixin text-shorten($numLines: 1) {
+@mixin text-shorten($numLines: 3) {
   @include text-truncate;
 
   @supports (-webkit-line-clamp: $numLines) {

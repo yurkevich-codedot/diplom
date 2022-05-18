@@ -9,8 +9,6 @@ mapboxgl.accessToken =
 const swiper = new Swiper(".swiper", {
   centeredSlides: false,
   modules: [Navigation],
-  // slidesPerView: 1.5,
-  // spaceBetween: 10,
 
   pagination: {
     el: ".swiper-pagination",
@@ -51,7 +49,7 @@ const swiper = new Swiper(".swiper", {
 const iswiper = new Swiper(".mySwiper", {
   modules: [Navigation, Autoplay],
   slidesPerView: 1,
-  speed: 3000,
+  speed: 1500,
   loop: true,
   navigation: {
     nextEl: ".next",
@@ -65,7 +63,7 @@ const iswiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
   },
   autoplay: {
-    delay: 3000,
+    delay: 2000,
     stopOnLastSlide: false,
     disableOnInteraction: false,
   },
@@ -75,25 +73,22 @@ if (document.querySelector("#map")) {
   const map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/danveryurk/cl343ryf0000014qf07xxxlvt",
-    center: [30.202, 55.185],
+    center: [30.197, 55.187],
     zoom: 15,
     pitch: 50,
   });
   map.on("load", () => {
-    // Add an image to use as a custom marker
     map.loadImage(
       "https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png",
       (error, image) => {
         if (error) throw error;
         map.addImage("custom-marker", image);
-        // Add a GeoJSON source with 2 points
         map.addSource("points", {
           type: "geojson",
           data: {
             type: "FeatureCollection",
             features: [
               {
-                // feature for Mapbox SF
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -104,7 +99,6 @@ if (document.querySelector("#map")) {
                 },
               },
               {
-                // feature for Mapbox SF
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -118,14 +112,12 @@ if (document.querySelector("#map")) {
           },
         });
 
-        // Add a symbol layer
         map.addLayer({
           id: "points",
           type: "symbol",
           source: "points",
           layout: {
             "icon-image": "custom-marker",
-            // get the title name from the source's "title" property
             "text-field": ["get", "title"],
             "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
             "text-offset": [0, 1.0],
@@ -157,13 +149,8 @@ if (document.querySelector(".header__menu-btn")) {
   });
 }
 
-// window.onscroll = function () {
-//   myFunction();
-// };
-
 if (document.querySelector(".header")) {
   var header = document.getElementById("myHeader");
-  // var sticky = header.offsetTop;
   header.classList.add("sticky");
 
   function myFunction() {

@@ -1,5 +1,7 @@
 .attraction {
-  padding: 40px 0 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-family: var(--fontFamily-text);
 
   &__wrapper {
     display: flex;
@@ -10,6 +12,10 @@
   &__article-wrapper {
     display: flex;
     gap: 110px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 50px;
+    }
 
     &--right {
       flex-direction: row;
@@ -32,24 +38,23 @@
     display: flex;
     flex-direction: column;
     gap: 35px;
-    width: 50%;
     word-break: break-word;
 
     @include media-breakpoint-down(lg) {
       width: 100%;
     }
+
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+    }
   }
 
   &__article-title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-      "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: var(--fontWieght-bold);
     font-size: 32px;
-    font-weight: 500;
   }
 
   &__article-discription {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-      "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 18px;
   }
 
@@ -71,6 +76,7 @@
 
   &__img-wrapper {
     display: flex;
+    height: 100%;
   }
 
   &__img-inner {
@@ -86,8 +92,6 @@
     gap: 10px;
 
     &-title {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-        "Open Sans", "Helvetica Neue", sans-serif;
       font-size: 18px;
     }
   }
@@ -116,7 +120,8 @@
 
   &__rating-simple-rating__item {
     position: absolute;
-    padding: 0 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 0;
     height: 0;
     opacity: 0;
@@ -126,7 +131,7 @@
 
     &:checked,
     &:checked ~ .attraction__rating-simple-rating__label {
-      color: purple;
+      color: var(--color-generaly);
     }
   }
 
@@ -144,7 +149,7 @@
     &:hover,
     &:hover ~ &,
     &:checked ~ &:hover {
-      color: purple;
+      color: var(--color-generaly);
     }
   }
 }

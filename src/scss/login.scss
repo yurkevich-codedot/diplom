@@ -1,7 +1,7 @@
 .btn {
   background-color: #3751ff;
   box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
-  border: 0;
+  border: none;
   border-radius: var(--border-radius);
   padding: 11px 16px;
 }
@@ -18,7 +18,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #fff;
+  color: var(--white);
 }
 
 .link {
@@ -29,7 +29,7 @@
   display: flex;
   align-items: center;
   min-height: 100vh;
-  font-family: var(--fontFamily-comforta);
+  font-family: var(--fontFamily-text);
 
   &__wrapper {
     display: flex;
@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     padding: 40px 32px;
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: var(--border-radius);
     box-shadow: 0 0 10px 0 #bbb9c0;
   }
