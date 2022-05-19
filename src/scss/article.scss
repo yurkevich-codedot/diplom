@@ -3,13 +3,13 @@
   padding-bottom: 40px;
   font-family: var(--fontFamily-text);
 
-  &__article-wrapper {
+  &__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 55px;
+    gap: 50px;
   }
 
-  &__article-content {
+  &__content {
     display: flex;
     flex-direction: column;
     gap: 35px;

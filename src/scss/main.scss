@@ -13,3 +13,77 @@
   background-color: var(--color-generaly);
   border: 3px solid #d4d4d4;
 }
+
+.main {
+  &__img-container {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    height: 100%;
+  }
+
+  &__img-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 35px;
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__search {
+    &-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+
+    &-fild {
+      border: 2px solid #d8d2df;
+      box-shadow: 0 0 0;
+      border-radius: 25px;
+      transition: border 0.25s ease-in-out;
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        padding: 5px 30px 5px 10px;
+        font-size: 14px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 16px;
+        padding: 10px 30px 10px 15px;
+      }
+    }
+
+    &:focus-visible,
+    &:active {
+      border: 2px solid var(--color-generaly);
+      outline: none;
+    }
+    &-icon {
+      position: absolute;
+      border: none;
+      background-color: transparent;
+      transition: background-color 0.2s ease-in-out;
+
+      &:active {
+        border-radius: 5px;
+        background-color: rgba(64, 29, 85, 0.24);
+      }
+    }
+  }
+}
