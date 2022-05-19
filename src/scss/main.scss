@@ -14,7 +14,54 @@
   border: 3px solid #d4d4d4;
 }
 
+* {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,700&display=swap");
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 400;
+}
+
 .main {
+  &__title {
+    font-weight: 700;
+    @include media-breakpoint-between(md, lg) {
+      font-size: 28px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 23px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 32px;
+    }
+
+    &--padding-bottom {
+      margin: 0;
+      padding-bottom: 10px;
+
+      @include media-breakpoint-between(md, lg) {
+        font-size: 28px;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 23px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__navigation {
+    font-size: 18px;
+    font-weight: bold;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 13px;
+    }
+  }
+
   &__img-container {
     display: flex;
     flex-direction: column;
@@ -67,23 +114,18 @@
         font-size: 16px;
         padding: 10px 30px 10px 15px;
       }
+
+      &:focus-visible,
+      &:active {
+        border: 2px solid var(--color-generaly);
+        outline: none;
+      }
     }
 
-    &:focus-visible,
-    &:active {
-      border: 2px solid var(--color-generaly);
-      outline: none;
-    }
     &-icon {
       position: absolute;
       border: none;
       background-color: transparent;
-      transition: background-color 0.2s ease-in-out;
-
-      &:active {
-        border-radius: 5px;
-        background-color: rgba(64, 29, 85, 0.24);
-      }
     }
   }
 }

@@ -1,5 +1,4 @@
 .footer {
-  font-family: var(--fontFamily-text);
   background-color: var(--black);
   color: var(--white);
 
@@ -38,12 +37,12 @@
 
       @include media-breakpoint-down(sm) {
         flex-direction: column;
-        align-items: center;
       }
     }
   }
 
   &__wrapper-inner:last-of-type() {
+    padding-top: 30px;
     border-top: 1px solid var(--white);
   }
   &__title {

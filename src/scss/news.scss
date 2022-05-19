@@ -24,13 +24,6 @@
     }
   }
 
-  &__name-wrapper {
-    font-family: var(--fontFamily-text);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
   &__items-wrapper {
     display: flex;
     flex-direction: column;
@@ -66,11 +59,17 @@
     width: 100%;
   }
 
+  &__name-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   &__name {
     cursor: pointer;
     color: var(--black);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 24px;
     transition: color 0.1s linear;
 

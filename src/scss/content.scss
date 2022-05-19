@@ -3,23 +3,19 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    font-family: var(--fontFamily-text);
 
     @include media-breakpoint-down(lg) {
       gap: 40px;
-      // padding-top: 25px;
       padding-bottom: 25px;
     }
 
     @include media-breakpoint-between(lg, xl) {
       gap: 50px;
-      // padding-top: 55px;
       padding-bottom: 55px;
     }
 
     @include media-breakpoint-up(xl) {
       gap: 60px;
-      // padding-top: 65px;
       padding-bottom: 65px;
     }
   }
@@ -40,26 +36,10 @@
     }
   }
 
-  &__navigation {
-    font-weight: bold;
-  }
-
   &__discription {
     display: flex;
     flex-direction: column;
     gap: 25px;
-  }
-
-  &__title {
-    font-weight: var(--fontWieght-bold);
-
-    @include media-breakpoint-between(md, lg) {
-      font-size: 32px;
-    }
-
-    @include media-breakpoint-down(md) {
-      font-size: 23px;
-    }
   }
 
   &__subtitle {
@@ -76,13 +56,6 @@
     position: relative;
     overflow: hidden;
     padding: 10px 5px;
-  }
-
-  &__items-title {
-    font-weight: var(--fontWieght-bold);
-    font-size: 26px;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
 
   &__item {

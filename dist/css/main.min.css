@@ -2,7 +2,7 @@
   font-family: Comfortaa;
   font-stretch: normal;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: url(Comfortaa\ Regular.eot);
   src: url(Comfortaa\ Regular.eot?#iefix) format("embedded-opentype"),
     url(Comfortaa\ Regular.woff2) format("woff2"), url(Comfortaa\ Regular.woff) format("woff"),
@@ -13,7 +13,7 @@
   font-family: Impact;
   font-stretch: normal;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: url(Impact.eot);
   src: url(Impact.eot?#iefix) format("embedded-opentype"), url(Impact.woff2) format("woff2"),
     url(Impact.woff) format("woff"), url(Impact.svg#Impact) format("svg");
@@ -23,7 +23,7 @@
   font-family: Impact;
   font-stretch: condensed;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: url(Impact.eot);
   src: url(Impact.eot?#iefix) format("embedded-opentype"), url(Impact.woff2) format("woff2"),
     url(Impact.woff) format("woff"), url(Impact.svg#Impact) format("svg");
@@ -44,7 +44,7 @@
   font-family: Roboto;
   font-stretch: normal;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: url(Roboto.eot);
   src: url(Roboto.eot?#iefix) format("embedded-opentype"), url(Roboto.woff2) format("woff2"),
     url(Roboto.woff) format("woff"), url(Roboto.svg#Roboto) format("svg");
@@ -559,7 +559,7 @@ body {
 .login__footer-discription {
   color: #9fa2b4;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 20px;
 }
 .login__footer-link {
@@ -808,7 +808,7 @@ body {
   color: #9fa2b4;
   display: flex;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   gap: 5px;
   line-height: 20px;
 }
@@ -987,7 +987,7 @@ body {
 }
 .header__title {
   font-family: Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   width: 250px;
 }
 @media (min-width: 992px) and (max-width: 1279.98px) {

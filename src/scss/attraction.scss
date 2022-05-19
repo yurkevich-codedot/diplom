@@ -1,7 +1,6 @@
 .attraction {
   padding-top: 40px;
   padding-bottom: 40px;
-  font-family: var(--fontFamily-text);
 
   &__wrapper {
     display: flex;
@@ -45,18 +44,13 @@
     }
   }
 
-  &__article-title {
-    font-weight: var(--fontWieght-bold);
-    font-size: 32px;
-  }
-
   &__article-discription {
     font-size: 18px;
   }
 
   &__rating {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 10px;
 
     &-title {
