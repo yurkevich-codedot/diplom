@@ -42,15 +42,11 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     margin-bottom: 5px;
 
-    @include media-breakpoint-down(lg) {
-      flex-direction: row;
+    @include media-breakpoint-down(xl) {
       padding: 20px 30px;
       gap: 30px;
     }
-    @include media-breakpoint-between(lg, xl) {
-      flex-direction: column;
-    }
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       padding: 24px 65px;
     }
   }
@@ -63,10 +59,6 @@
 
     @include media-breakpoint-down(xl) {
       font-size: 16px;
-    }
-    @include media-breakpoint-between(lg, xl) {
-      text-align: center;
-      font-size: 18px;
     }
     @include media-breakpoint-up(xl) {
       display: flex;
@@ -81,16 +73,15 @@
   }
 
   &__menu-btn {
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 20px;
-
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       display: block;
       background-color: transparent;
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 20px;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       display: none;
     }
   }
@@ -118,8 +109,9 @@
     width: 100%;
     justify-content: flex-end;
   }
+
   &__cross {
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       position: relative;
       width: 30px;
       height: 4px;
@@ -139,17 +131,18 @@
       }
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       display: none;
     }
   }
+
   &__nav-wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
     cursor: pointer;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       overflow: auto;
       background-color: var(--color-generaly);
       position: fixed;
@@ -167,14 +160,14 @@
     width: 94%;
     padding: 0 0 5px;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       color: var(--white);
       justify-content: center;
       border-bottom: none;
       padding: 25px 10px;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       position: relative;
       justify-content: flex-end;
       left: 30px;
@@ -187,7 +180,7 @@
     display: flex;
     font-size: 18px;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       flex-direction: column;
       border: none;
       align-items: flex-start;
@@ -195,7 +188,7 @@
       gap: 25px;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       align-items: center;
       border-radius: 35px 0 0 35px;
       border-top: 1px solid var(--black);
@@ -221,11 +214,11 @@
       color: var(--color-generaly);
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       color: var(--black);
       font-size: 16px;
     }
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       color: var(--white);
       font-size: 16px;
       padding-bottom: 5px;
@@ -234,7 +227,7 @@
     &--active {
       color: var(--color-generaly);
 
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(xl) {
         color: var(--white);
         border-bottom: 1px solid var(--white);
       }
@@ -245,7 +238,7 @@
     display: flex;
     gap: 25px;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       flex-direction: column;
       width: 100%;
     }
@@ -262,7 +255,7 @@
     border-radius: 35px;
     transition: box-shadow 0.2s ease-in;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       text-align: center;
       padding: 7px 24px;
       width: 100%;

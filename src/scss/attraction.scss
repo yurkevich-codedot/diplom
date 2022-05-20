@@ -58,7 +58,7 @@
     }
   }
 
-  &__rating-simple-rating {
+  &__rating-simple {
     position: relative;
     font-size: 25px;
     display: inline-block;
@@ -69,7 +69,7 @@
     }
   }
 
-  &__rating-simple-rating__items {
+  &__rating-simple__items {
     display: flex;
     flex-direction: row-reverse;
     position: absolute;
@@ -80,7 +80,7 @@
     overflow: hidden;
   }
 
-  &__rating-simple-rating__item {
+  &__rating-simple__item {
     position: absolute;
     padding-left: 5px;
     padding-right: 5px;
@@ -92,12 +92,12 @@
     left: 0;
 
     &:checked,
-    &:checked ~ .attraction__rating-simple-rating__label {
+    &:checked ~ .attraction__rating-simple__label {
       color: var(--color-generaly);
     }
   }
 
-  &__rating-simple-rating__label {
+  &__rating-simple__label {
     flex: 0 0 20%;
     height: 100%;
     cursor: pointer;
