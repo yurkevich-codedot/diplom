@@ -12,41 +12,37 @@
     <link rel="shortcut icon" href="favicon/favicon.ico" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="myHeader">
       <div class="header__wrapper">
-        <div class="header__title">Достопримечательности Витебской области</div>
+        <a href="main.html" class="header__title">Достопримечательности Витебской области</a>
         <input type="checkbox" id="menu" />
         <label class="menu" for="menu"
-          ><div class="header__menu-btn" onclick="s();"><div class="header__menu-icon"></div></div
+          ><div class="header__menu-btn"><div class="header__menu-icon"></div></div
         ></label>
         <label class="backdrop" for="menu"></label>
-        <div class="header__nav-wrapper">
-          <div class="header__user">daniilsergeevich200111@gmail.com</div>
+        <nav class="header__nav-wrapper">
+          <div class="header__cross-wrapper">
+            <label for="menu"><div class="header__cross"></div></label>
+          </div>
+          <a href="profile-user.html" class="header__item header__user">daniilsergeevich200111@gmail.com</a>
           <div class="header__nav-wrapper-list">
             <div class="header__nav-list">
-              <a class="header__item">Главная</a> <a class="header__item">Новости</a>
-              <a class="header__item">Достопримечательности</a>
-              <a class="header__item">Категории</a>
-              <a class="header__item">Населенный пункт</a>
+              <a href="main.html" class="header__item header__item--active">Главная</a>
+              <a href="news.html" class="header__item">Новости</a>
+              <a href="content.html" class="header__item">Достопримечательности</a>
               <div class="main__search-wrapper">
-                <input class="main__search" id="search" placeholder="Поиск..." />
+                <input class="main__search-fild" id="searchFooter" name="search_bar" placeholder="Поиск..." />
                 <button class="main__search-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2" />
                     <path d="M20 20L17 17" stroke="black" stroke-width="2" stroke-linecap="round" />
                   </svg>
                 </button>
               </div>
             </div>
-            <a class="header__btn-sign">Войти</a>
+            <a href="login.html" class="header__btn-sign">Войти</a>
           </div>
-        </div>
+        </nav>
       </div>
     </header>
     <script src="/js/main.min.js"></script>

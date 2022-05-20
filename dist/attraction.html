@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Attraction</title>
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+  </head>
+  <body>
+    <header class="header" id="myHeader">
+      <div class="header__wrapper">
+        <a href="main.html" class="header__title">Достопримечательности Витебской области</a>
+        <input type="checkbox" id="menu" />
+        <label class="menu" for="menu"
+          ><div class="header__menu-btn"><div class="header__menu-icon"></div></div
+        ></label>
+        <label class="backdrop" for="menu"></label>
+        <nav class="header__nav-wrapper">
+          <div class="header__cross-wrapper">
+            <label for="menu"><div class="header__cross"></div></label>
+          </div>
+          <a href="profile-user.html" class="header__item header__user">daniilsergeevich200111@gmail.com</a>
+          <div class="header__nav-wrapper-list">
+            <div class="header__nav-list">
+              <a href="main.html" class="header__item header__item--active">Главная</a>
+              <a href="news.html" class="header__item">Новости</a>
+              <a href="content.html" class="header__item">Достопримечательности</a>
+              <div class="main__search-wrapper">
+                <input class="main__search-fild" id="searchFooter" name="search_bar" placeholder="Поиск..." />
+                <button class="main__search-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2" />
+                    <path d="M20 20L17 17" stroke="black" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <a href="login.html" class="header__btn-sign">Войти</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="background">
+      <picture><img src="../../img/background.png" class="background__img" alt="background" /></picture>
+      <div class="container">
+        <div class="content__discription-wrapper">
+          <div class="main__navigation">
+            <a href="main.html" class="main__breadcrump">Главная</a>
+            <a href="content.html" class="main__breadcrump">Достопримечательности</a>
+            <a href="#" class="main__breadcrump">Три штыка</a>
+          </div>
+          <div class="content__discription"><h1 class="main__title">Достопримечательности</h1></div>
+        </div>
+      </div>
+    </section>
+    <section class="attraction">
+      <div class="container">
+        <div class="attraction__wrapper">
+          <div class="attraction__items-wrapper attraction__items-wrapper--right">
+            <div class="attraction__item-content">
+              <h1 class="main__title">Мемориальный комплекс "Три штыка": подвиг народа бессмертен.</h1>
+              <div class="attraction__rating">
+                <div class="attraction__rating-title">Оценить:</div>
+                <div class="attraction__rating-simple-rating">
+                  <div class="attraction__rating-simple-rating__items">
+                    <input type="radio" class="attraction__rating-simple-rating__item" id="rating_5" value="5" />
+                    <label for="rating_5" class="attraction__rating-simple-rating__label"></label>
+                    <input type="radio" class="attraction__rating-simple-rating__item" id="rating_4" value="4" />
+                    <label for="rating_4" class="attraction__rating-simple-rating__label"></label>
+                    <input type="radio" class="attraction__rating-simple-rating__item" id="rating_3" value="3" />
+                    <label for="rating_3" class="attraction__rating-simple-rating__label"></label>
+                    <input type="radio" class="attraction__rating-simple-rating__item" id="rating_2" value="2" />
+                    <label for="rating_2" class="attraction__rating-simple-rating__label"></label>
+                    <input type="radio" class="attraction__rating-simple-rating__item" id="rating_1" value="1" />
+                    <label for="rating_1" class="attraction__rating-simple-rating__label"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="attraction__item-discription">
+                У каждого города есть свои знаковые объекты. В Витебске – это мемориальный комплекс "Три штыка", в
+                котором запечатлен бессмертный подвиг народа. Три штыка величественно возвышаются над городом, напоминая
+                горожанам вновь и вновь о прожитых суровых годах и о великой жертве советского народа во имя Победы. По
+                туристическому Витебску гулять можно часами. И всякий раз вы будете открывать все новые и новые страницы
+                из истории Витебска, стоит лишь внимательно осмотреться по сторонам. Здесь каждый сможет найти что-то
+                свое, родное, но загадок и чудес здесь таится еще больше. Стоит единожды посетить портал о Витебске,
+                чтобы понять, что этот город не посетить невозможно.
+              </div>
+            </div>
+            <div class="main__img-container">
+              <div class="main__img-wrapper">
+                <picture class="main__img-inner"
+                  ><img src="../../img/vitebsk.png" class="main__img" alt="lol"
+                /></picture>
+              </div>
+            </div>
+          </div>
+          <div class="attraction__items-wrapper attraction__items-wrapper--left">
+            <div class="attraction__item-content">
+              <div class="main__title">Мемориальный комплекс "Три штыка": подвиг народа бессмертен.</div>
+              <div class="attraction__item-discription">
+                У каждого города есть свои знаковые объекты. В Витебске – это мемориальный комплекс "Три штыка", в
+                котором запечатлен бессмертный подвиг народа. Три штыка величественно возвышаются над городом, напоминая
+                горожанам вновь и вновь о прожитых суровых годах и о великой жертве советского народа во имя Победы. По
+                туристическому Витебску гулять можно часами. И всякий раз вы будете открывать все новые и новые страницы
+                из истории Витебска, стоит лишь внимательно осмотреться по сторонам. Здесь каждый сможет найти что-то
+                свое, родное, но загадок и чудес здесь таится еще больше. Стоит единожды посетить портал о Витебске,
+                чтобы понять, что этот город не посетить невозможно.
+              </div>
+              <div class="attraction__item-discription">
+                У каждого города есть свои знаковые объекты. В Витебске – это мемориальный комплекс "Три штыка", в
+                котором запечатлен бессмертный подвиг народа. Три штыка величественно возвышаются над городом, напоминая
+                горожанам вновь и вновь о прожитых суровых годах и о великой жертве советского народа во имя Победы. По
+                туристическому Витебску гулять можно часами. И всякий раз вы будете открывать все новые и новые страницы
+                из истории Витебска, стоит лишь внимательно осмотреться по сторонам. Здесь каждый сможет найти что-то
+                свое, родное, но загадок и чудес здесь таится еще больше. Стоит единожды посетить портал о Витебске,
+                чтобы понять, что этот город не посетить невозможно.
+              </div>
+              <div class="attraction__item-discription">
+                У каждого города есть свои знаковые объекты. В Витебске – это мемориальный комплекс "Три штыка", в
+                котором запечатлен бессмертный подвиг народа. Три штыка величественно возвышаются над городом, напоминая
+                горожанам вновь и вновь о прожитых суровых годах и о великой жертве советского народа во имя Победы. По
+                туристическому Витебску гулять можно часами. И всякий раз вы будете открывать все новые и новые страницы
+                из истории Витебска, стоит лишь внимательно осмотреться по сторонам. Здесь каждый сможет найти что-то
+                свое, родное, но загадок и чудес здесь таится еще больше. Стоит единожды посетить портал о Витебске,
+                чтобы понять, что этот город не посетить невозможно.
+              </div>
+              <div class="attraction__item-discription">
+                У каждого города есть свои знаковые объекты. В Витебске – это мемориальный комплекс "Три штыка", в
+                котором запечатлен бессмертный подвиг народа. Три штыка величественно возвышаются над городом, напоминая
+                горожанам вновь и вновь о прожитых суровых годах и о великой жертве советского народа во имя Победы. По
+                туристическому Витебску гулять можно часами. И всякий раз вы будете открывать все новые и новые страницы
+                из истории Витебска, стоит лишь внимательно осмотреться по сторонам. Здесь каждый сможет найти что-то
+                свое, родное, но загадок и чудес здесь таится еще больше. Стоит единожды посетить портал о Витебске,
+                чтобы понять, что этот город не посетить невозможно.
+              </div>
+            </div>
+            <div class="main__img-container">
+              <div class="main__img-wrapper">
+                <picture class="main__img-inner"
+                  ><img src="../../img/3_shtyka_big.png" class="main__img" alt="lol"
+                /></picture>
+              </div>
+              <div class="main__img-wrapper">
+                <picture class="main__img-inner"
+                  ><img src="../../img/3_shtika.png" class="main__img" alt="lol"
+                /></picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map">
+      <div class="container">
+        <div class="map__wrapper">
+          <div class="map__title">Местонахождение на карте:</div>
+          <div class="map__content" id="map"></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__wrapper-inner">
+            <div class="footer__title">Достопримечательности Витебской области</div>
+            <div class="main__search-wrapper">
+              <input class="main__search-fild" id="searchFooter" name="search_bar" placeholder="Поиск..." />
+              <button class="main__search-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2" />
+                  <path d="M20 20L17 17" stroke="black" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="footer__wrapper-inner">
+            <div class="footer__list-wrapper">
+              <a href="content.html" class="footer__list-title">Достопримечательности</a>
+              <div class="footer__items">
+                <a href="attraction.html" class="footer__item">Три штыка</a>
+                <a href="attraction.html" class="footer__item">Памятник Князю Альгерду</a>
+                <a href="attraction.html" class="footer__item">Памятник Воинам-интернационалистам</a>
+                <a href="attraction.html" class="footer__item">Три штыка</a>
+              </div>
+            </div>
+            <div class="footer__list-wrapper">
+              <a href="#" class="footer__list-title">Категории</a>
+              <div class="footer__items">
+                <a href="#" class="footer__item">Памятники</a> <a href="#" class="footer__item">Исторический объект</a>
+                <a href="#" class="footer__item">Культурный объект</a>
+              </div>
+            </div>
+            <div class="footer__list-wrapper">
+              <a href="news.html" class="footer__list-title">Новости</a>
+              <div class="footer__items">
+                <a href="paragraph.html" class="footer__item">Чернобыльская зона: осколки памяти</a>
+                <a href="paragraph.html" class="footer__item">"Синий" дом снова синий</a>
+                <a href="paragraph.html" class="footer__item">Супер крутая и полезная статья</a>
+              </div>
+            </div>
+            <div class="footer__list-wrapper">
+              <a href="#" class="footer__list-title">Населенный пункт</a>
+              <div class="footer__items">
+                <a href="#" class="footer__item">Витебск</a> <a href="#" class="footer__item">Толочин</a>
+                <a href="#" class="footer__item">Сенно</a> <a href="#" class="footer__item">Ушачи</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__wrapper-inner footer__wrapper-inner--license">
+            <div class="footer__copyright">© Все права защищены автором</div>
+            <div class="footer__copyright-date">2022</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/main.min.js"></script>
+  </body>
+</html>

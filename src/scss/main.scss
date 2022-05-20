@@ -1,3 +1,9 @@
+* {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,700&display=swap");
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 400;
+}
+
 .lock-scroll {
   overflow: hidden;
 }
@@ -14,13 +20,35 @@
   border: 3px solid #d4d4d4;
 }
 
-* {
-  @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,700&display=swap");
-  font-family: "Roboto Flex", sans-serif;
-  font-weight: 400;
-}
-
 .main {
+  &__navigation {
+    font-size: 18px;
+    font-weight: bold;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__breadcrump {
+    color: white;
+    text-decoration: none;
+    transition: color 0.1s linear;
+
+    &:hover {
+      color: var(--color-generaly);
+    }
+
+    & + &::before {
+      color: white;
+      content: " | ";
+    }
+
+    &:last-of-type() {
+      color: rgb(202, 202, 202);
+    }
+  }
+
   &__title {
     font-weight: 700;
     @include media-breakpoint-between(md, lg) {
@@ -50,15 +78,6 @@
       @include media-breakpoint-up(lg) {
         font-size: 32px;
       }
-    }
-  }
-
-  &__navigation {
-    font-size: 18px;
-    font-weight: bold;
-
-    @include media-breakpoint-down(lg) {
-      font-size: 13px;
     }
   }
 
