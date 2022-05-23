@@ -20,6 +20,30 @@
   border: 3px solid #d4d4d4;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 100%;
+  @include media-breakpoint-down(md) {
+    max-width: 480px;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    max-width: 768px;
+  }
+  @include media-breakpoint-between(lg, xl) {
+    max-width: 992px;
+  }
+  @include media-breakpoint-between(xl, xxl) {
+    max-width: 1280px;
+  }
+  @include media-breakpoint-up(xxl) {
+    max-width: 1536px;
+  }
+}
+
 .main {
   &__navigation {
     font-size: 18px;
