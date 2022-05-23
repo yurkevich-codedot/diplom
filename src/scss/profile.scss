@@ -55,10 +55,13 @@
       padding: 10px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.308);
       border-radius: 5px;
-      width: 50%;
 
       @include media-breakpoint-down(xl) {
         width: 100%;
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: 50%;
       }
     }
   }
@@ -103,10 +106,13 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr;
 
     @include media-breakpoint-down(xl) {
       grid-template-columns: 1fr;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: 1fr 2fr;
     }
   }
 
@@ -117,7 +123,10 @@
     align-items: center;
     padding: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.308);
-    height: 100%;
+
+    @include media-breakpoint-down(xl) {
+      height: 100%;
+    }
 
     @include media-breakpoint-up(xl) {
       height: 450px;

@@ -158,7 +158,6 @@
   &__user {
     display: flex;
     width: 94%;
-    padding: 0 0 5px;
 
     @include media-breakpoint-down(xl) {
       color: var(--white);
@@ -168,6 +167,7 @@
     }
 
     @include media-breakpoint-up(xl) {
+      padding-bottom: 5px;
       position: relative;
       justify-content: flex-end;
       left: 30px;
@@ -250,7 +250,6 @@
     align-self: center;
     background-color: var(--color-generaly);
     font-weight: 600;
-    padding: 14px 24px;
     border-radius: 35px;
     transition: box-shadow 0.2s ease-in;
 
@@ -258,8 +257,11 @@
       text-align: center;
       padding: 7px 24px;
       width: 100%;
-      background-color: var(--color-generaly);
       border: 1px solid var(--white);
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 14px 24px;
     }
 
     &:hover {

@@ -1,7 +1,11 @@
+@font-face {
+  font-family: "RobotoFlex";
+  src: url("./RobotoFlex-Regular.ttf") format("ttf");
+}
+
 * {
-  @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,700&display=swap");
-  font-family: "Roboto Flex", sans-serif;
-  font-weight: 400;
+  font-family: "RobotoFlex", sans-serif;
+  font-weight: 500;
 }
 
 .lock-scroll {
@@ -26,6 +30,7 @@
   padding-left: 12px;
   padding-right: 12px;
   width: 100%;
+
   @include media-breakpoint-down(md) {
     max-width: 480px;
   }
@@ -75,6 +80,7 @@
 
   &__title {
     font-weight: 700;
+
     @include media-breakpoint-between(md, lg) {
       font-size: 28px;
     }

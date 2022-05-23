@@ -10,25 +10,32 @@
 
   &__items-wrapper {
     display: flex;
-    gap: 110px;
 
     @include media-breakpoint-down(lg) {
       gap: 50px;
     }
 
-    &--right {
-      flex-direction: row;
+    @include media-breakpoint-up(lg) {
+      gap: 110px;
+    }
 
+    &--right {
       @include media-breakpoint-down(xl) {
         flex-direction: column;
+      }
+
+      @include media-breakpoint-up(xl) {
+        flex-direction: row;
       }
     }
 
     &--left {
-      flex-direction: row-reverse;
-
       @include media-breakpoint-down(xl) {
         flex-direction: column;
+      }
+
+      @include media-breakpoint-up(xl) {
+        flex-direction: row-reverse;
       }
     }
   }
@@ -38,6 +45,7 @@
     flex-direction: column;
     gap: 35px;
     word-break: break-word;
+    text-align: justify;
 
     @include media-breakpoint-up(xl) {
       width: 80%;
@@ -65,7 +73,6 @@
 
     &::before {
       content: "★★★★★";
-      display: inline-block;
     }
   }
 
