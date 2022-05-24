@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"
+      content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=5,minimum-scale=1"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Attraction</title>
@@ -31,8 +31,8 @@
               <a href="news.html" class="header__item">Новости</a>
               <a href="content.html" class="header__item">Достопримечательности</a>
               <div class="main__search-wrapper">
-                <input class="main__search-fild" id="searchFooter" name="search_bar" placeholder="Поиск..." />
-                <button class="main__search-icon">
+                <input class="main__search-fild" id="searchHeader" name="search_bar" placeholder="Поиск..." />
+                <button class="main__search-icon" name="search">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2" />
                     <path d="M20 20L17 17" stroke="black" stroke-width="2" stroke-linecap="round" />
@@ -46,7 +46,7 @@
       </div>
     </header>
     <section class="background">
-      <picture><img src="../../img/background.png" class="background__img" alt="background" /></picture>
+      <picture><img src="../../img/uploads/background.png" class="background__img" alt="background" /></picture>
       <div class="container">
         <div class="content__discription-wrapper">
           <div class="main__navigation">
@@ -66,18 +66,18 @@
               <h1 class="main__title">Мемориальный комплекс "Три штыка": подвиг народа бессмертен.</h1>
               <div class="attraction__rating">
                 <div class="attraction__rating-title">Оценить:</div>
-                <div class="attraction__rating-simple-rating">
-                  <div class="attraction__rating-simple-rating__items">
-                    <input type="radio" class="attraction__rating-simple-rating__item" id="rating_5" value="5" />
-                    <label for="rating_5" class="attraction__rating-simple-rating__label"></label>
-                    <input type="radio" class="attraction__rating-simple-rating__item" id="rating_4" value="4" />
-                    <label for="rating_4" class="attraction__rating-simple-rating__label"></label>
-                    <input type="radio" class="attraction__rating-simple-rating__item" id="rating_3" value="3" />
-                    <label for="rating_3" class="attraction__rating-simple-rating__label"></label>
-                    <input type="radio" class="attraction__rating-simple-rating__item" id="rating_2" value="2" />
-                    <label for="rating_2" class="attraction__rating-simple-rating__label"></label>
-                    <input type="radio" class="attraction__rating-simple-rating__item" id="rating_1" value="1" />
-                    <label for="rating_1" class="attraction__rating-simple-rating__label"></label>
+                <div class="attraction__rating-simple">
+                  <div class="attraction__rating-simple__items">
+                    <input type="radio" class="attraction__rating-simple__item" id="rating_5" value="5" />
+                    <label for="rating_5" class="attraction__rating-simple__label"></label>
+                    <input type="radio" class="attraction__rating-simple__item" id="rating_4" value="4" />
+                    <label for="rating_4" class="attraction__rating-simple__label"></label>
+                    <input type="radio" class="attraction__rating-simple__item" id="rating_3" value="3" />
+                    <label for="rating_3" class="attraction__rating-simple__label"></label>
+                    <input type="radio" class="attraction__rating-simple__item" id="rating_2" value="2" />
+                    <label for="rating_2" class="attraction__rating-simple__label"></label>
+                    <input type="radio" class="attraction__rating-simple__item" id="rating_1" value="1" />
+                    <label for="rating_1" class="attraction__rating-simple__label"></label>
                   </div>
                 </div>
               </div>
@@ -94,7 +94,7 @@
             <div class="main__img-container">
               <div class="main__img-wrapper">
                 <picture class="main__img-inner"
-                  ><img src="../../img/vitebsk.png" class="main__img" alt="lol"
+                  ><img src="../../img/uploads/vitebsk.png" class="main__img" alt="lol"
                 /></picture>
               </div>
             </div>
@@ -142,12 +142,12 @@
             <div class="main__img-container">
               <div class="main__img-wrapper">
                 <picture class="main__img-inner"
-                  ><img src="../../img/3_shtyka_big.png" class="main__img" alt="lol"
+                  ><img src="../../img/uploads/3_shtyka_big.png" class="main__img" alt="lol"
                 /></picture>
               </div>
               <div class="main__img-wrapper">
                 <picture class="main__img-inner"
-                  ><img src="../../img/3_shtika.png" class="main__img" alt="lol"
+                  ><img src="../../img/uploads/3_shtika.png" class="main__img" alt="lol"
                 /></picture>
               </div>
             </div>
@@ -170,7 +170,7 @@
             <div class="footer__title">Достопримечательности Витебской области</div>
             <div class="main__search-wrapper">
               <input class="main__search-fild" id="searchFooter" name="search_bar" placeholder="Поиск..." />
-              <button class="main__search-icon">
+              <button class="main__search-icon" name="search">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2" />
                   <path d="M20 20L17 17" stroke="black" stroke-width="2" stroke-linecap="round" />

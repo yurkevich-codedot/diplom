@@ -104,17 +104,31 @@
   &__page-num {
     text-decoration: none;
     color: var(--black);
-    font-size: clamp(16px, 5vw, 18px);
     padding: 10px;
     line-height: 18px;
     transition: font-size 0.1s linear;
 
+    @include media-breakpoint-down(xl) {
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 18px;
+    }
+
     .news__pagination-btns > &:active,
     .news__pagination-btns > &:hover {
-      font-size: clamp(20px, 5vw, 28px);
       color: var(--color-generaly);
       font-weight: bold;
       line-height: 18px;
+
+      @include media-breakpoint-down(xl) {
+        font-size: 20px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: 28px;
+      }
     }
   }
 
